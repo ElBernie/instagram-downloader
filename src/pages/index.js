@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import DownloadInput from "../components/DownloadInput"
 import Header from "../components/header"
 
 export default function Home() {
@@ -8,8 +9,8 @@ export default function Home() {
       <Link to="/about">/about</Link>
       <Link to="/support">/support</Link>
       <Header title="Hello Gatsby" />
-      <p>What a world</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
+
+      <DownloadInput />
     </div>
   )
 }

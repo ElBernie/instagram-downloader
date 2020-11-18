@@ -1,8 +1,8 @@
 import React from "React"
 import { Link } from "gatsby"
 
-import NavbarStyle from "./navbar.module.css"
-export default class Navbar extends React.Component {
+import NavbarStyle from "./navigation.module.css"
+export default class Navigation extends React.Component {
   render() {
     return (
       <nav className={NavbarStyle.navbarContainer}>

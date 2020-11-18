@@ -1,12 +1,12 @@
 import React from "react"
 import DownloadInput from "../components/DownloadInput"
-import Navbar from "../components/Navbar"
+import Navigation from "../components/Navigation"
 import { Link } from "gatsby"
 import indexStyle from "../styles/index.module.css"
 export default function Home() {
   return (
     <React.Fragment>
-      <Navbar />
+      <Navigation />
 
       <div className={indexStyle.hero}>
         <header>

@@ -2,6 +2,7 @@ import React from "React"
 import { Link } from "gatsby"
 
 import NavbarStyle from "./navigation.module.css"
+
 export default class Navigation {
   render() {
     return (

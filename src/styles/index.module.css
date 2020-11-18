@@ -31,28 +31,15 @@
   justify-content: center;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.tools {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 header {
   width: 900px;
-  height: 300px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 10px 0;
+  padding-bottom: 75px;
 }
 
 h2 {
@@ -76,17 +63,48 @@ input[type="url"] {
   border: 0;
   border-radius: 2.5px;
   width: 400px;
-  line-height: 30px;
+  line-height: 35px;
+  font-size: 17px;
   background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(172, 172, 172);
 }
 input[type="submit"] {
   border: 0;
+  line-height: 35px;
+  height: 35px;
   border-radius: 2px;
   line-height: 30px;
 }
 
+.tools {
+  display: flex;
+  justify-content: center;
+}
+.downloader {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -75px;
+  background-color: white;
+  height: 150px;
+  border-radius: 5px;
+}
+
 .help {
   font-size: 14px;
-  color: rgb(223, 223, 223);
+  color: rgb(165, 165, 165);
   text-decoration: unset;
+}
+
+.panelContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+.panel {
+  margin: 15px 0;
+  width: 800px;
+  background-color: white;
 }

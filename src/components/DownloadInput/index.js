@@ -1,7 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import { css } from "@emotion/core"
+import ClipLoader from "react-spinners/ClipLoader"
 
 import downloadInputStyles from "./style.module.css"
+
 const instaPost = /(https?:\/\/(?:www\.)?instagram\.com\/([^/?#&]+)).*/g
 
 export default class DownloadInput extends React.Component {
@@ -11,21 +14,29 @@ export default class DownloadInput extends React.Component {
       value: "",
       typing: false,
       typingTimeout: 0,
-
+      loading: false,
       inputError: false,
       showError: false,
+      showSuccess: false,
       alert: "",
     }
   }
 
   validateLink = event => {
     event.preventDefault()
-    console.log("stop typing..")
+    this.setState({
+      inputError: false,
+      showError: false,
+      showSuccess: false,
+      loading: true,
+    })
     const url = this.state.value.split("?")[0]
     console.log(url)
     if (url.includes("/reel/")) {
       this.setState({
         inputError: false,
+        showError: false,
+        showSuccess: true,
       })
       console.log("instapost")
     }
@@ -34,6 +45,8 @@ export default class DownloadInput extends React.Component {
         console.log("INSTA POST")
         this.setState({
           inputError: false,
+          showError: false,
+          showSuccess: true,
         })
       }
     } else {
@@ -42,6 +55,7 @@ export default class DownloadInput extends React.Component {
         this.setState({
           inputError: false,
           showError: false,
+          showSuccess: true,
         })
       } else {
         console.log("invalid")
@@ -71,7 +85,16 @@ export default class DownloadInput extends React.Component {
               placeholder={this.props.placeholder}
             />
 
-            <input type="submit" value="download" />
+            <div
+              className={`${downloadInputStyles.submit} `}
+              onClick={this.validateLink}
+            >
+              {this.state.loading ? (
+                <ClipLoader size={30} color={"white"} loading={true} />
+              ) : (
+                "Download"
+              )}
+            </div>
           </form>
           <Link to="help" className={downloadInputStyles.help}>
             Need help ?
@@ -80,6 +103,8 @@ export default class DownloadInput extends React.Component {
           <div
             className={`${downloadInputStyles.error} ${
               this.state.showError ? downloadInputStyles.animatedError : ""
+            } ${
+              this.state.showSuccess ? downloadInputStyles.animatedSuccess : ""
             }`}
           >
             {this.state.alert}

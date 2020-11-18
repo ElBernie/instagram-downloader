@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

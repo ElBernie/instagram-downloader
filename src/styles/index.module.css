@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.hero {
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 900px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+}
+
+h2 {
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
+  text-shadow: 0 0 1px transparent;
+  font-weight: 100;
+}
+
+p {
+  color: white;
+}
+
+input {
+  margin: 5px 5px;
+  padding: 0 5px;
+  outline: none;
+}
+input[type="url"] {
+  border: 0;
+  border-radius: 2.5px;
+  width: 400px;
+  line-height: 30px;
+  background-color: rgb(255, 255, 255);
+}
+input[type="submit"] {
+  border: 0;
+  border-radius: 2px;
+  line-height: 30px;
+}
+
+.help {
+  font-size: 14px;
+  color: rgb(223, 223, 223);
+  text-decoration: unset;
+}

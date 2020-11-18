@@ -39,8 +39,10 @@ export default class DownloadInput extends React.Component {
       <div>
         <form onSubmit={this.validateLink}>
           <input
+            type="url"
             value={this.state.value}
             onChange={event => this.handleChange(event)}
+            placeholder={this.props.placeholder}
           />
           <input type="submit" value="download" />
         </form>

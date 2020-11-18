@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation"
 import { Link } from "gatsby"
 import indexStyle from "../styles/index.module.css"
 import { Helmet } from "react-helmet"
+
 export default function Home() {
   return (
     <React.Fragment>
@@ -30,12 +31,7 @@ export default function Home() {
         </header>
       </div>
       <section className={indexStyle.tools}>
-        <div className={indexStyle.downloader}>
-          <DownloadInput placeholder="paste a post link or an account link here" />
-          <Link to="help" className={indexStyle.help}>
-            Need help ?
-          </Link>
-        </div>
+        <DownloadInput placeholder="paste a post link or an account link here" />
       </section>
 
       <div class={indexStyle.panelContainer}>
@@ -49,7 +45,7 @@ export default function Home() {
           </p>
         </section>
         <section className={indexStyle.panel}>
-          <h3>How to download the picture ?</h3>
+          <h3>How to download ?</h3>
           <p>
             When the new tab with your picture (or video) is open, you juste
             have to{" "}
@@ -60,6 +56,12 @@ export default function Home() {
         </section>
         <section className={indexStyle.panel}>
           <h3>What link is accepted ?</h3>
+          <p>You can use 3 types of links:</p>
+          <ul>
+            <li>Post link - https://www.instagram.com/p/1234</li>
+            <li>User profile - https://www.instagram.com/lebernie</li>
+            <li>Reel link - https://www.instagram.com/reel/12345</li>
+          </ul>
         </section>
       </div>
     </React.Fragment>

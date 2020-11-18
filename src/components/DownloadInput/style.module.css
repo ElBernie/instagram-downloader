@@ -1,0 +1,45 @@
+.container {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -75px;
+  background-color: white;
+  min-height: 150px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.downloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.help {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(165, 165, 165);
+  text-decoration: unset;
+}
+
+.error {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.animatedError {
+  height: auto;
+  padding: 24px 18px;
+  border: 1px solid rgb(255, 132, 132);
+  border-radius: 5px;
+  margin: 15px;
+}

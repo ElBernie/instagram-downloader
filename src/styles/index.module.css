@@ -69,34 +69,43 @@ input[type="url"] {
   border: 1px solid rgb(172, 172, 172);
 }
 input[type="submit"] {
+  color: white;
   border: 0;
   line-height: 35px;
   height: 35px;
   border-radius: 2px;
-  line-height: 30px;
+  line-height: 35px;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 .tools {
   display: flex;
   justify-content: center;
-}
-.downloader {
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -75px;
-  background-color: white;
-  height: 150px;
-  border-radius: 5px;
-}
-
-.help {
-  font-family: "Robot", sans-serif;
-  font-size: 14px;
-  color: rgb(165, 165, 165);
-  text-decoration: unset;
 }
 
 .panelContainer {
@@ -111,6 +120,7 @@ input[type="submit"] {
   padding: 15px 15px;
   width: 800px;
   background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h3 {
@@ -131,4 +141,18 @@ h3 {
 .panel p .emphasis {
   font-weight: 400;
   font-style: italic;
+}
+
+.panel ul {
+  margin: 5px 17px;
+  font-family: "Robot", sans-serif;
+  line-height: 22px;
+  color: rgb(165, 165, 165);
+  text-decoration: unset;
+}
+.panel li > * {
+  font-family: "Robot", sans-serif;
+  font-size: 14px;
+  color: rgb(165, 165, 165);
+  text-decoration: unset;
 }

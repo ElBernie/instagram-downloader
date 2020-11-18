@@ -93,6 +93,7 @@ input[type="submit"] {
 }
 
 .help {
+  font-family: "Robot", sans-serif;
   font-size: 14px;
   color: rgb(165, 165, 165);
   text-decoration: unset;
@@ -100,11 +101,34 @@ input[type="submit"] {
 
 .panelContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin: 30px 0;
 }
 .panel {
   margin: 15px 0;
+  padding: 15px 15px;
   width: 800px;
   background-color: white;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  color: #494848;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.panel p {
+  color: grey;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.panel p .emphasis {
+  font-weight: 400;
+  font-style: italic;
 }

@@ -40,7 +40,26 @@ export default function Home() {
 
       <div class={indexStyle.panelContainer}>
         <section className={indexStyle.panel}>
-          <img src="https://source.unsplash.com/random/150x150" />
+          <h3>Can I download private post or profile picture ?</h3>
+          <p>
+            <span className={indexStyle.emphasis}>Yes it's easy !</span> You
+            just have to be connected in your instagram account in this browser,
+            follow the private account, grab the link of the private post and
+            paste it !
+          </p>
+        </section>
+        <section className={indexStyle.panel}>
+          <h3>How to download the picture ?</h3>
+          <p>
+            When the new tab with your picture (or video) is open, you juste
+            have to{" "}
+            <span className={indexStyle.emphasis}>
+              right click it and select "save as..."
+            </span>
+          </p>
+        </section>
+        <section className={indexStyle.panel}>
+          <h3>What link is accepted ?</h3>
         </section>
       </div>
     </React.Fragment>

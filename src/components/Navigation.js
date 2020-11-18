@@ -1,4 +1,3 @@
-import React from "React"
 import { Link } from "gatsby"
 
 import NavbarStyle from "./navigation.module.css"

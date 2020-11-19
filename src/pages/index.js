@@ -36,7 +36,7 @@ export default function Home() {
           <DownloadInput placeholder="paste a post link or an account link here" />
         </section>
 
-        <div class={indexStyle.panelContainer}>
+        <div className={indexStyle.panelContainer}>
           <section className={indexStyle.panel}>
             <h3>Can I download private post or profile picture ?</h3>
             <p>

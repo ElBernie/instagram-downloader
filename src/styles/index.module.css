@@ -1,34 +1,66 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .hero {
   background: #f09433;
-  background: -moz-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
-  background: -webkit-linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
   background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
+    270deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
   );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-  display: flex;
-  justify-content: center;
+  background-size: 1000% 1000%;
+
+  -webkit-animation: AnimationName 16s ease infinite;
+  -moz-animation: AnimationName 16s ease infinite;
+  -o-animation: AnimationName 16s ease infinite;
+  animation: AnimationName 16s ease infinite;
 }
 
 header {
@@ -68,7 +100,6 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
 }
 .panel {
   margin: 15px 0;
@@ -141,11 +172,62 @@ h3 {
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+  .hero {
+    padding: 2px;
+  }
+  header {
+    height: 300px;
+  }
+  h2 {
+    line-height: 3.2rem;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+  .tools {
+    width: 100%;
+    align-items: center;
+  }
+  .panelContainer {
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .panel {
+    width: 90%;
+  }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  body {
-    background-color: #b2d6ff; /* Blue */
+  .hero {
+    padding: 2px;
+  }
+  header {
+    height: 300px;
+  }
+  h2 {
+    line-height: 3.2rem;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+  .tools {
+    width: 100%;
+    align-items: center;
+  }
+  .panelContainer {
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .panel {
+    width: 50%;
   }
 }

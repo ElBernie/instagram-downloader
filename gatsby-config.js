@@ -6,9 +6,23 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: `https://instagramdownloadermaster.gtsb.io`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    "gatsby-plugin-robots-txt",
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://instagramdownloadermaster.gtsb.io",
+        sitemap: "https://instagramdownloadermaster.gtsb.io/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {

@@ -1,5 +1,4 @@
 .container {
-  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,6 +9,7 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 .downloader {
   display: flex;
   flex-direction: column;
@@ -17,9 +17,10 @@
   align-items: center;
   padding: 20px 0;
 }
+
 .help {
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
   color: rgb(165, 165, 165);
   text-decoration: unset;
@@ -57,7 +58,18 @@ form {
   justify-content: center;
   align-items: center;
 }
+
+input[type="url"] {
+  border: 0;
+  border-radius: 2.5px;
+  line-height: 35px;
+  font-size: 1.063rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(172, 172, 172);
+}
+
 .submit {
+  cursor: pointer;
   min-width: 100px;
   display: flex;
   justify-content: center;
@@ -95,6 +107,36 @@ form {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
   margin: 5px 5px;
   padding: 0 5px;
-  font-size: 13px;
+  font-size: 0.813rem;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+  .downloader {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+    flex-direction: column;
+  }
+  input[type="url"] {
+    width: 100%;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  body {
+    background-color: #f5cf8e; /* Yellow */
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+    background-color: #b2d6ff; /* Blue */
+  }
 }
